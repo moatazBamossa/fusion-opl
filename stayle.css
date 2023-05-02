@@ -63,6 +63,9 @@ body {
     align-items: center;
     flex-wrap: nowrap;
 }
+.top button {
+    display: none;
+}
 .top .Navation a{
 
     color: var(--color-dark);
@@ -79,7 +82,9 @@ body {
     background-color: var(--color-primary);
     transition: width 300ms ease;
   }
-
+  .close {
+    display: none;
+  }
   .top .Navation a:hover:before{
     width: 100%;
   }
@@ -92,7 +97,7 @@ img {
 }
 
 .container .top .logo {
-    width: 15rem;
+    width: 17%;
     height: 2.2rem;
     margin-left: var(--margin-left);
 }
@@ -101,7 +106,12 @@ img {
     font-size: 17px;
     width: 100%;
     margin-right: var(--margin-right);
-
+    animation: showMenu 400ms ease forwards;
+}
+@keyframes showMenu {
+    to{
+        right: 0;
+    }
 }
 .container .top .Navation a{
     margin: 12px;
@@ -698,3 +708,112 @@ footer {
  margin-top: 3rem;
  padding-bottom: 3rem;
 }
+/* ================== MEDIA QUERIES Mobile ========= */
+    @media screen and (max-width: 768px) {
+        .top button {
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            color: var(--color-dark);
+            position: absolute;
+            right: 1rem;
+            border: 0;
+        }
+        .top button span {
+            font-size: 30px;
+        }
+        .container .top .Navation {
+            display: none;
+        }
+        .container .top .Navation a{
+            display: block;
+        }
+        .container .top .logo{
+
+        }
+        .second {
+            display: block;
+        }
+        .second .left {
+            margin: 0;
+            text-align: center;
+            padding: 0;
+            width: 100%;
+        }
+        .second .right {
+           display: none;
+        }
+        .thered .services{
+            display: block;
+        }
+        .ManageStatistics .right{
+            display: none;
+        }
+        .Features{
+            display: block;
+        }
+        .Features .left {
+            text-align: center;
+        }
+        .Features .middle {
+            display: none;
+        }
+        .Features .right {
+            text-align: center;
+        }
+        .all-teams{
+            margin: 0;
+        }
+        .Meetourtea .team{
+            display: block;
+        }
+        .Pricing{
+            margin: 0;
+        }
+        .Pricing .pricing-boxes{
+            display: block;
+        }
+        .all-testimonial {
+            margin: 0;
+        }
+        .testimonial .cards {
+            display: block;
+        }
+        .Getfreetrial{
+
+            display: block;
+        }
+        .Getfreetrial .left {
+            margin: 0;
+            text-align: center;
+        }
+        .Getfreetrial .right{
+            margin: 0;
+            text-align: center;
+        }
+        .CountactUs .contacts{
+            margin: 0px 1rem;
+        }
+
+        .CountactUs .map {
+            display: none;
+        }
+        footer {
+            margin: 0;
+        }
+
+        .footer footer {
+            display: block;
+        }
+        .footer footer .fusion {
+            width: 100%;
+            text-align: center;
+        }
+        .footer footer .links {
+            width: 100%;
+             text-align: center;
+        }
+        .Cont {
+            text-align: center;
+        }
+    }
