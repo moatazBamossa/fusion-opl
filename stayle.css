@@ -11,6 +11,8 @@
     --color-primary-variant : #111e88;
     --color-dark-variant : #677483;
     --color-background : #fff;
+    --margin-left : 15%;
+    --margin-right : 15%;
     --card-border-radius : 2rem;
     --border-radius-1 : 0.4rem;
     --border-radius-2 : 0.8rem;
@@ -22,7 +24,7 @@
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 *{
-    border: 0;
+
     margin: 0;
     padding: 0;
     outline: 0;
@@ -44,13 +46,15 @@ body {
     overflow-x: hidden;
 }
 .container{
-    display: grid;
+
     width: 100%;
     margin: 0 auto;
     gap: 1.8rem;
     justify-items: end;
 }
 .top{
+    top: 0;
+    z-index: 1;
     background: var(--color-white);
     position: fixed;
     box-shadow: var(--box-shadow);
@@ -58,7 +62,6 @@ body {
     width: 100%;
     align-items: center;
     flex-wrap: nowrap;
-    justify-content: space-around;
 }
 .top .Navation a{
 
@@ -85,20 +88,26 @@ body {
   }
 img {
     display: block;
-    width: 70%;
+    width: 100%;
 }
 
 .container .top .logo {
-    width: 12rem;
-    height: 3rem;
-    position: relative;
-
+    width: 15rem;
+    height: 2.2rem;
+    margin-left: var(--margin-left);
 }
 .container .top .Navation {
-    display: flex;
-    gap: 2vw;
-    font-size: 15px;
+    text-align: end;
+    font-size: 17px;
+    width: 100%;
+    margin-right: var(--margin-right);
 
+}
+.container .top .Navation a{
+    margin: 12px;
+}
+.container .top .Navation a:last-child{
+    margin: 0;
 }
 .container .top .Navation .active {
     color: var(--color-primary);
@@ -109,16 +118,15 @@ img {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 2rem;
     display: flex;
-    width: 96%;
-    align-items: start;
-    align-self: center;
-    padding: 4rem 0 220px;
+    width: 100%;
+    padding-bottom: 17rem;
+    margin-top: 11rem;
+    margin-bottom: 6rem;
 }
 .second .left {
-    margin-left: 9%;
-    width: 41%;
+    margin-left: var(--margin-left);
+    width: 48%;
 }
 
 .second .left h1 {
@@ -130,6 +138,7 @@ img {
 .paragraph{
     font-family: Arial, sans-serif;
     font-size: 17px;
+    line-height: 2rem;
     font-weight: 500;
     color: var(--color-info-dark);
     margin-top: 10px;
@@ -139,6 +148,7 @@ img {
 .btn {
     align-content: center;
     font-size: 19px;
+    border: 0;
     background: var(--color-primary);
     color: var(--color-white);
     padding: 10px 34px;
@@ -172,19 +182,35 @@ img {
     border: 1px solid var(--color-primary);
 
 }
-
+.second .right {
+    margin-right: var(--margin-right);
+}
 .second .right img{
-    width: 66%;
+    width: 86%;
 }
 /* .backimg {
     margin-bottom: -112px
 } */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 1000vmax;
+  }
 
+  .back-to-top:hover {
+    background-color: #666;
+  }
 /* ============= Services ============= */
 .thered{
     margin-top: 2rem;
     text-align: center;
-    width: 89%;
+    width: 100%;
+
 }
 .lines h1{
     text-align: center;
@@ -192,6 +218,7 @@ img {
     color: var(--color-dark);
     text-decoration: none;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 lines{
@@ -223,14 +250,18 @@ lines:before {
 
 .thered .services {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,1fr);
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+
 }
 .thered .services .service {
     transition: all 300ms ease;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 4px;
     text-align: center;
-    margin: 15px 15px;
+   margin-right: 5%;
+   margin-top: 1rem;
 
 }
 .thered .services .service .icon span{
@@ -259,14 +290,26 @@ lines:before {
     background: var(--color-primary);
     color: var(--color-white);
 }
+/* ============ManageStatistics=================== */
+.all-features {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+}
+.mange-content {
+
+    margin-left: var(--margin-left);
+    margin-bottom: 6rem;
+    margin-right: var(--margin-right);
+}
 .ManageStatistics {
     padding: 60px 0;
     margin-top: 2rem;
-    width: 88%;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 .ManageStatistics .left {
-    width: 80%;
+    width: 100%;
 }
 .ManageStatistics .left h1{
     font-size: 35px;
@@ -285,14 +328,14 @@ lines:before {
 
 .ManageStatistics .right {
     width: 100%;
-    margin-left: 12px
+
 }
 .ManageStatistics .right img{
-    padding: 0rem 2rem 0rem 0rem;
+
 }
 /* ==============AwesomeFeatures================ */
 .AwesomeFeatures {
-    width: 88%;
+    width: 100%;
 }
 .AwesomeFeatures .title h1{
     text-align: center;
@@ -302,7 +345,7 @@ lines:before {
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 88%;
+    width: 100%;
 }
 .Features .left{
 text-align: end;
@@ -317,7 +360,7 @@ text-align: end;
 .Features .feature .up .icon {
     color: var(--color-primary);
     float: right;
-     padding: 12px 16px 39px 17px;
+    padding: 12px 16px 39px 17px;
 }
 .Features .feature .paragraph {
     padding: 13px 12px 21px 12px;
@@ -341,12 +384,15 @@ text-align: end;
 
     width: 100%;
 }
+.all-teams{
+    margin-left:var(--margin-left);
+    margin-right: calc(var(--margin-right) - 1%);
+}
 .Meetourtea .team{
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 85%;
-    padding-left: 14rem;
+    width: 100%;
  }
 
  .Meetourtea .team .member{
@@ -390,13 +436,13 @@ text-align: end;
 }
 /* ===============Pricing==================== */
 .Pricing {
-    width: 85%;
     text-align: center;
-    padding-right: 15rem;
+    margin-left:var(--margin-left);
+    margin-right:calc(var(--margin-right) + 1%);
+    margin-bottom:4rem;
 }
 
 .Pricing .pricing-boxes{
-
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -461,17 +507,20 @@ text-align: end;
     text-align: center;
     background: var(--color-primary);
 }
+.all-testimonial{
+    margin-left:var(--margin-left);
+    margin-right: var(--margin-right);
+}
 .testimonial .cards{
-    padding-right: 11rem;
-    padding-left: 12rem;
+
     display: flex;
 }
 .testimonial .cards .card {
     background: #fff;
     border-radius: 4px;
     text-align: center;
-    padding: 30px 20px;
-    margin: 3rem;
+    margin:  4% 1% 4% 0%;
+    padding: 1%;
 }
 .testimonial .cards .card .image{
     display: flex;
@@ -505,32 +554,41 @@ text-align: end;
 }
 /* ==============Getfreetrial=================== */
 .Getfreetrial {
+    margin-top: 3rem;
     display: flex;
 }
 .Getfreetrial .left {
-    width: 50%;
+    width: 100%;
+    margin-left: var(--margin-left);
+
 }
 .Getfreetrial .left .title h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 .Getfreetrial .right {
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    text-align: end;
+    margin-right: var(--margin-right);
 }
 /* =========Contact =============== */
 .CountactUs {
     width: 100%;
 }
+.CountactUs .contacts {
+    margin-left: var(--margin-left);
+    margin-right: calc(var(--margin-right) + 1%);
+
+}
 .CountactUs .contact {
     display: flex;
+    gap: 2%;
 }
 .CountactUs .data {
-    width: 53%;
-    padding-left: 14rem;
+    width: 100%;
 }
 .input {
-    width: 49%;
+    width: 48%;
     height: 42px;
     border: 1px solid #e9e2e2;
     padding: 15px;
@@ -545,19 +603,21 @@ text-align: end;
 .CountactUs .contact .data .message{
     width: 98%;
     height: 10rem;
+    resize: vertical;
 }
 .CountactUs .map{
-    width: 33rem;
+    width: 100%;
 }
 .CountactUs .map object{
-    margin-left: 4rem;
     height: 280px;
      width: 100%;
 }
 /* =============== footer ======================= */
+footer {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+}
 .footer footer{
-
-    margin: 5rem 14rem;
     display: flex;
 }
 .footer footer .fusion {
@@ -625,17 +685,16 @@ text-align: end;
 }
 /* =============copyright================== */
 .copyright {
+    margin-top: 4rem;
     text-align: center;
-    padding-right: 16rem;
-    padding-left: 14rem;
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
     font-size: 16px;
-}
-.copyright hr{
-    border: 1px solid;
 }
 .copyright a {
     color: var(--color-primary);
 }
 .copyright .copyright-content {
-    margin: 1rem;
+ margin-top: 3rem;
+ padding-bottom: 3rem;
 }
